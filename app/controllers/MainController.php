@@ -2,7 +2,7 @@
 
 require_once("vendor/autoload.php");
 
-class MainController {
+class MainController extends Controller {
 
     function MainPage() {
         $mainPageTemplate = new Template();
