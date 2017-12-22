@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Log in</title>
+	<link rel='stylesheet' type='text/css' href='/views/css/skeleton.css'/>
+	<link rel='stylesheet' type='text/css' href='/views/css/login.css'/>
+</head>
+<body>
+	<form method="POST" action="/authenticate">
+		<div class="row">
+			<div class="six columns">
+				<label class="login-label" for="loginInput">Login</label>
+				<input placeholder="Your login" id="loginInput" name="username" type="text">
+			</div>
+		</div>
+		<div class="row">
+			<div class="six columns">
+				<label class="login-label" for="passwordInput">Password</label>
+				<input placeholder="Your password" id="passwordInput" name="password" type="password">
+			</div>
+			<input class="button-primary" value="Submit" type="submit">
+		</div>
+	</form>
+</body>
+</html>
