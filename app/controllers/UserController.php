@@ -25,19 +25,14 @@ class UserController extends Controller {
 		$user->getByName($username);
 
 		if ($user->dry()) {
-			$this->console_log('elo2');
 			$this->f3->reroute('/login');
 		}
 
 		if (password_verify($password, $user->get(password))) {
 			$this->f3->set('SESSION.user', $user->username);
-			$this->console_log('MAMY TO');
 			$this->f3->reroute('/');
 
 		} else {
-			$this->console_log(password_hash($password, PASSWORD_DEFAULT));
-			$this->console_log($user->password);
-			$this->console_log('elo');
 			$this->f3->reroute('/login');
 		}
 	}
